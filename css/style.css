@@ -1,0 +1,142 @@
+/* main section backgrounds */
+#namespace #section-1 {
+	background-image: url(../img/1.png);
+}
+
+#namespace #section-2 {
+	background-color: whitesmoke;
+}
+
+#namespace #section-3 {
+	background-image: whitesmoke;
+}
+
+#namespace #section-4 {
+	background-image: whitesmoke;
+}
+
+/* column-like content boxes */
+#namespace #left-content {
+	float: left;
+}
+
+#namespace #right-content {
+	float: right;
+	margin-right: 10px;
+}
+
+/* shapes-infinity */
+
+#namespace #infinity {
+    position: relative;
+    width: 212px;
+    height: 100px;
+}
+
+#namespace #infinity:before,
+#namespace #infinity:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid white;
+    -moz-border-radius: 50px 50px 0 50px;
+         border-radius: 50px 50px 0 50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+#namespace #infinity:after {
+    left: auto;
+    right: 0;
+    -moz-border-radius: 50px 50px 50px 0;
+         border-radius: 50px 50px 50px 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+/* shapes-verticle lines */
+
+#namespace #right-content #line-1 {
+	float: left;
+	width: 5px;
+	height: 20em;
+	background: white;
+	margin-left: 3em;
+}
+
+#namespace #right-content #line-2 {
+	float: left;
+	width: 2px;
+	height: 30em;
+	background: white;
+	margin: 0px auto;
+	margin-left: 6em;
+}
+
+/* menu */
+#menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#menu li {
+	display: inline-block;
+	margin: 10px;
+	color: #000;
+	background: #fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#menu li.active {
+	background: #666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+
+#menu li a, #menu li.active a {
+	padding: 9px 18px;
+	display: block;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:-webkit-any-link {
+	color: -webkit-link;
+	text-decoration: underline;
+	cursor: auto;
+}

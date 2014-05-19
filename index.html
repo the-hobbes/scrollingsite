@@ -10,17 +10,58 @@
 		<meta name="viewport" content="width=device-width">
 
 		<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	</head>
 
-	<body>
-	  <header> </header>
+	<body id="namespace">
+		<ul id="menu">
+			<li data-menuanchor="firstPage" class="active"><a href="#firstPage">First slide</a></li>
+			<li data-menuanchor="secondPage" class=""><a href="#secondPage">Second slide</a></li>
+			<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+			<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+		</ul>
 
-	  <footer> </footer>
+		<div id="fullpage">
+
+			<div class="section" id="section-1">
+				<div class="section-contents">
+
+					<div class="left-content">
+						<!-- <p>here is some content</p> -->
+					</div> <!-- end left content -->
+					
+					<div id="right-content">
+						<div id="infinity"></div>	
+						<div id="line-1"></div>
+						<div id="line-2"></div>
+						<div id="line-3"></div>
+						<div id="line-4"></div>
+					</div> <!-- end right content -->
+
+				</div><!--end section-contents-->
+			</div>
+
+			<div class="section" id="section-2"></div>
+			<div class="section" id="section-3"></div>
+			<div class="section" id="section-4"></div>
+
+		</div><!--end fullpage -->
 
 		<!-- scripts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="js/jquery.fullPage.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>	
+	
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu'
+			});
+			
+		});
+	</script>
+
 		<!-- end scripts -->
 	</body>
 </html>
